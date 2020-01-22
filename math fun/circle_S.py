@@ -12,8 +12,8 @@ def circle_S(request):
     request_json = request.get_json()
     request_args = request.args
     
-    if request.args and 'r' in request.args:
-        r = request_args['r']
+    if request_args and 'r' in request_args:
+        r = int(request_args['r'])
         S = pi * r ** 2
     elif request_json and 'r' in request_json:
         r = request_json['r']
