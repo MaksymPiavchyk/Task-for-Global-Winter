@@ -11,8 +11,8 @@ def square_P(request):
     request_json = request.get_json()
     request_args = request.args
     
-    if request.args and 'a' in request.args:
-        a = request_args['a']
+    if request_args and 'a' in request_args:
+        a = int(request_args['a'])
         P = 4 * a
     elif request_json and 'a' in request_json:
         a = request_json['a']
