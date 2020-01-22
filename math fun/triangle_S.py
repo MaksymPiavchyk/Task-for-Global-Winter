@@ -11,10 +11,10 @@ def triengle_S(request):
     request_json = request.get_json()
     request_args = request.args
     
-    if request.args and 'b' and 'h' in request.args:
+    if request_args and 'b' and 'h' in request_args:
         
-        b = request_args['b']
-        h = request_args['h']
+        b = int(request_args['b'])
+        h = int(request_args['h'])
         S = (b * h)/2
     elif request_json and 'b' and 'h' in request_json:        
 	        
