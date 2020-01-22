@@ -11,10 +11,10 @@ def triengle_P(request):
     request_json = request.get_json()
     request_args = request.args
     
-    if request.args and 'a' and 'b' and 'c' in request.args:
-        a = request_args['a']
-        b = request_args['b']
-        c = request_args['c']
+    if request_args and 'a' and 'b' and 'c' in request_args:
+        a = int(request_args['a'])
+        b = int(request_args['b'])
+        c = int(request_args['c'])
         P = a + b + c
     elif request_json and 'a' and 'b' and 'c' in request_json:        
         a = request_json['a']
