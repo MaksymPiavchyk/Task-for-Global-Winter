@@ -11,11 +11,11 @@ def circle_P(request):
     """
     request_json = request.get_json()
     request_args = request.args
-    if request.args and 'r' in request.args:
-        r = request_args['r']
+    if request_args and 'r' in request_args:
+        r = int(request_args['r'])
         P = 2 * pi * r
     elif request_json and 'r' in request_json:
-        r = request_json['r']
+        r = (request_json['r'])
         P = 2 * pi * r
     else:
         P = 'Error code'
